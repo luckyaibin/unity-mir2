@@ -725,12 +725,12 @@ public abstract class Packet
                 return new S.ItemUpgraded();
             case (short)ServerPacketIds.SetConcentration:
                 return new S.SetConcentration();
-            case (short)ServerPacketIds.SetObjectConcentration:
-                return new S.SetObjectConcentration();
+            // case (short)ServerPacketIds.SetObjectConcentration:
+            //     return new S.SetObjectConcentration();
             case (short)ServerPacketIds.SetElemental:
                 return new S.SetElemental();
-            case (short)ServerPacketIds.SetObjectElemental:
-                return new S.SetObjectElemental();
+            // case (short)ServerPacketIds.SetObjectElemental:
+            //     return new S.SetObjectElemental();
             case (short)ServerPacketIds.RemoveDelayedExplosion:
                 return new S.RemoveDelayedExplosion();
             case (short)ServerPacketIds.ObjectDeco:

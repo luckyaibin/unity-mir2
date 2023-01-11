@@ -7,7 +7,7 @@ namespace mir.objects.magic
 {
     public class ThunderBoltBuilder : TwoSectionBuilder
     {
-        private static readonly string ThunderBolt_INFO_PATH = MapConfigs.MAP_Data + "magic/ThunderBolt/ThunderBolt.info";
+        private static readonly string ThunderBolt_INFO_PATH = MapConfigs.Data_Dir + "magic/ThunderBolt/ThunderBolt.info";
         private static readonly string ThunderBolt_Animator_PATH = "mir/data/magic/ThunderBolt/anim/ThunderBolt";
         public static Vector2 offset = readOffsets(ThunderBolt_INFO_PATH)[0];
 

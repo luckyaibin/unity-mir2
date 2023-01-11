@@ -8,7 +8,7 @@ namespace mir.objects.magic
     public class GreatFireBallBuilder : ThreeSectionBuilder
     {
 
-        private static readonly string FireBall_INFO_PATH = MapConfigs.MAP_Data + "magic/GreatFireBall/GreatFireBall.info";
+        private static readonly string FireBall_INFO_PATH = MapConfigs.Data_Dir + "magic/GreatFireBall/GreatFireBall.info";
         private static readonly string FireBall_Animator_PATH = "mir/data/magic/GreatFireBall/anim/GreatFireBall";
         public static Vector2 offset = readOffsets(FireBall_INFO_PATH)[0];
 

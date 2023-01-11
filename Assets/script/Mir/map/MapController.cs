@@ -58,7 +58,7 @@ namespace Assets.script.Mir.map
         private void changeMapInfo()
         {
             destroyMirCell();
-            mapReader = new MapReader(MapConfigs.MAP_DIR + "/" + mapName + ".map");
+            mapReader = new MapReader(MapConfigs.MAP_DIR + mapName + ".map");
             mapCells = new MirCell[mapReader.Width, mapReader.Height];
         }
 
@@ -235,7 +235,7 @@ namespace Assets.script.Mir.map
             // mapCells[mapX, mapY] = null;
             // Destroy(gameObject);
             // gameObject.SetActive(false);
-            // x = max - 
+            // x = max -
 
 
 

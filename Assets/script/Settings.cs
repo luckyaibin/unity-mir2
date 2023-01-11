@@ -6,7 +6,7 @@ namespace Client
     public class Settings
     {
 
-        public const string resRootPath = "/Users/yangcai/Documents/unity-workspace/c#Mir";
+        public const string resRootPath = @"E:\exp\mir2-2022.06.12.00\Build\Client";
 
         public const string DataPath = resRootPath + "/Data/",
                             MapPath = resRootPath + "/Map/",
@@ -37,7 +37,7 @@ namespace Client
                             TransformMountsPath = resRootPath + "/Data/TransformRide2/",
                             TransformEffectPath = resRootPath + "/Data/TransformEffect/",
                             TransformWeaponEffectPath = resRootPath + "/Data/TransformWeaponEffect/";
-        internal static readonly string IPAddress = "8.142.23.14";
+        internal static readonly string IPAddress = "127.0.0.1";
         internal static readonly int Port = 7000;
         internal static readonly int TimeOut = 5000;
     }

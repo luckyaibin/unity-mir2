@@ -21,8 +21,13 @@ public abstract class MirBaseController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        var clips = animator.runtimeAnimatorController.animationClips;
-
+        AnimationClip[] clips = new AnimationClip[0];
+        if (animator != null){
+            clips = animator?.runtimeAnimatorController?.animationClips;
+        }
+        if (clips == null || clips.Length==0){
+            return;
+        }
         foreach (var clip in clips)
         {
             var actionDirection = clip.name.Split('_');

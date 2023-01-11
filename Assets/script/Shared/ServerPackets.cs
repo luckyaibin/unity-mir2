@@ -4551,7 +4551,7 @@ namespace ServerPackets
         }
     }
 
-    public sealed class UserAttackMove : Packet//warrior skill - SlashingBurst move packet 
+    public sealed class UserAttackMove : Packet//warrior skill - SlashingBurst move packet
     {
         public override short Index
         {
@@ -4646,27 +4646,27 @@ namespace ServerPackets
             writer.Write(Interrupted);
         }
     }
-    public sealed class SetObjectConcentration : Packet
-    {
-        public override short Index { get { return (short)ServerPacketIds.SetObjectConcentration; } }
+    // public sealed class SetObjectConcentration : Packet
+    // {
+    //     public override short Index { get { return (short)ServerPacketIds.SetObjectConcentration; } }
 
-        public uint ObjectID;
-        public bool Enabled;
-        public bool Interrupted;
+    //     public uint ObjectID;
+    //     public bool Enabled;
+    //     public bool Interrupted;
 
-        protected override void ReadPacket(BinaryReader reader)
-        {
-            ObjectID = reader.ReadUInt32();
-            Enabled = reader.ReadBoolean();
-            Interrupted = reader.ReadBoolean();
-        }
-        protected override void WritePacket(BinaryWriter writer)
-        {
-            writer.Write(ObjectID);
-            writer.Write(Enabled);
-            writer.Write(Interrupted);
-        }
-    }
+    //     protected override void ReadPacket(BinaryReader reader)
+    //     {
+    //         ObjectID = reader.ReadUInt32();
+    //         Enabled = reader.ReadBoolean();
+    //         Interrupted = reader.ReadBoolean();
+    //     }
+    //     protected override void WritePacket(BinaryWriter writer)
+    //     {
+    //         writer.Write(ObjectID);
+    //         writer.Write(Enabled);
+    //         writer.Write(Interrupted);
+    //     }
+    // }
     public sealed class SetElemental : Packet
     {
         public override short Index { get { return (short)ServerPacketIds.SetElemental; } }
@@ -4694,36 +4694,36 @@ namespace ServerPackets
             writer.Write(ExpLast);
         }
     }
-    public sealed class SetObjectElemental : Packet
-    {
-        public override short Index { get { return (short)ServerPacketIds.SetObjectElemental; } }
+    // public sealed class SetObjectElemental : Packet
+    // {
+    //     public override short Index { get { return (short)ServerPacketIds.SetObjectElemental; } }
 
-        public uint ObjectID;
-        public bool Enabled;
-        public bool Casted;
-        public uint Value;
-        public uint ElementType;
-        public uint ExpLast;
+    //     public uint ObjectID;
+    //     public bool Enabled;
+    //     public bool Casted;
+    //     public uint Value;
+    //     public uint ElementType;
+    //     public uint ExpLast;
 
-        protected override void ReadPacket(BinaryReader reader)
-        {
-            ObjectID = reader.ReadUInt32();
-            Enabled = reader.ReadBoolean();
-            Casted = reader.ReadBoolean();
-            Value = reader.ReadUInt32();
-            ElementType = reader.ReadUInt32();
-            ExpLast = reader.ReadUInt32();
-        }
-        protected override void WritePacket(BinaryWriter writer)
-        {
-            writer.Write(ObjectID);
-            writer.Write(Enabled);
-            writer.Write(Casted);
-            writer.Write(Value);
-            writer.Write(ElementType);
-            writer.Write(ExpLast);
-        }
-    }
+    //     protected override void ReadPacket(BinaryReader reader)
+    //     {
+    //         ObjectID = reader.ReadUInt32();
+    //         Enabled = reader.ReadBoolean();
+    //         Casted = reader.ReadBoolean();
+    //         Value = reader.ReadUInt32();
+    //         ElementType = reader.ReadUInt32();
+    //         ExpLast = reader.ReadUInt32();
+    //     }
+    //     protected override void WritePacket(BinaryWriter writer)
+    //     {
+    //         writer.Write(ObjectID);
+    //         writer.Write(Enabled);
+    //         writer.Write(Casted);
+    //         writer.Write(Value);
+    //         writer.Write(ElementType);
+    //         writer.Write(ExpLast);
+    //     }
+    // }
 
     public sealed class ObjectDeco : Packet
     {

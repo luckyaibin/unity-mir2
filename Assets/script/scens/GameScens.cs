@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.script.Mir.log;
 using Assets.script.Mir.map;
 using Assets.script.Mir.scens;
 using Client.MirNetwork;
@@ -44,7 +45,7 @@ public class GameScens : MonoBehaviour, ProcessPacket
     // Update is called once per frame
     void Update()
     {
-
+        LogUtil.log("Game scene ","update...");
     }
 
 

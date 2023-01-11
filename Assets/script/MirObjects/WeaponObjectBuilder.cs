@@ -9,7 +9,7 @@ public class WeaponObjectBuilder : MirObjectBuilder<ObjectPlayer>
 {
     private static readonly string Weapon_RES_DIR = "mir/Data/CWeapon/";
 
-    private static readonly string Weapon_POFFSET_INFO_PATH = MapConfigs.MAP_Data + "CWeapon/CWeapon.info";
+    private static readonly string Weapon_POFFSET_INFO_PATH = MapConfigs.Data_Dir + "CWeapon/CWeapon.info";
 
     public static List<Vector2Int> weaponOffsets = readOffsets(Weapon_POFFSET_INFO_PATH);
 

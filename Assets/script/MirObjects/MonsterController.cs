@@ -17,6 +17,7 @@ public class MonsterController : MirBaseController
 
     protected override void onStart()
     {
+        return;
         animator.SetInteger(Mir_Direction, (int)objectMonster.Direction);
         animator.SetInteger(Mir_Action, (int)MirAction.Standing);
         var stateName = MirAction.Standing.ToString() + "_" + objectMonster.Direction.ToString();

@@ -7,7 +7,7 @@ namespace mir.objects.magic
 {
     public class RepulsionBuilder : OneSectionBuilder
     {
-        private static readonly string ThunderBolt_INFO_PATH = MapConfigs.MAP_Data + "magic/Repulsion/Repulsion.info";
+        private static readonly string ThunderBolt_INFO_PATH = MapConfigs.Data_Dir + "magic/Repulsion/Repulsion.info";
         private static readonly string ThunderBolt_Animator_PATH = "mir/data/magic/Repulsion/anim/Repulsion";
         public static Vector2 offset = readOffsets(ThunderBolt_INFO_PATH)[0];
 

@@ -9,7 +9,7 @@ public class HairObjectBuilder : MirObjectBuilder<ObjectPlayer>
 {
     private static readonly string HAIR_RES_DIR = "mir/Data/CHair/";
 
-    private static readonly string PLAYER_POFFSET_INFO_PATH = MapConfigs.MAP_Data + "CHair/cHair.info";
+    private static readonly string PLAYER_POFFSET_INFO_PATH = MapConfigs.Data_Dir + "CHair/cHair.info";
 
     public static List<Vector2Int> hairOffsets = readOffsets(PLAYER_POFFSET_INFO_PATH);
 

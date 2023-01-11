@@ -12,6 +12,7 @@ namespace Assets.script.Mir.scens
         // Use this for initialization
         void Start()
         {
+            log.LogUtil.log("GameManager ","Start...");
             //DontDestroyOnLoad(this);
             // MirNetwork.Connect();
         }
@@ -19,6 +20,7 @@ namespace Assets.script.Mir.scens
         // Update is called once per frame
         void Update()
         {
+            log.LogUtil.log("GameManager ","Update...");
             MirNetwork.Process();
         }
     }

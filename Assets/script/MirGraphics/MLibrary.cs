@@ -58,32 +58,32 @@ namespace Client.MirGraphics
         public static readonly MLibrary
             Deco = new MLibrary(Settings.DataPath + "Deco");
 
-        public static MLibrary[] CArmours,
-                                          CWeapons,
-                                          CWeaponEffect,
-                                          CHair,
-                                          CHumEffect,
-                                          AArmours,
-                                          AWeaponsL,
-                                          AWeaponsR,
-                                          AHair,
-                                          AHumEffect,
-                                          ARArmours,
-                                          ARWeapons,
-                                          ARWeaponsS,
-                                          ARHair,
-                                          ARHumEffect,
-                                          Monsters,
-                                          Gates,
-                                          Flags,
-                                          Mounts,
-                                          NPCs,
-                                          Fishing,
-                                          Pets,
-                                          Transform,
-                                          TransformMounts,
-                                          TransformEffect,
-                                          TransformWeaponEffect;
+public static MLibrary[] CArmours,
+                        CWeapons,
+                        CWeaponEffect,
+                        CHair,
+                        CHumEffect,
+                        AArmours,
+                        AWeaponsL,
+                        AWeaponsR,
+                        AHair,
+                        AHumEffect,
+                        ARArmours,
+                        ARWeapons,
+                        ARWeaponsS,
+                        ARHair,
+                        ARHumEffect,
+                        Monsters,
+                        Gates,
+                        Flags,
+                        Mounts,
+                        NPCs,
+                        Fishing,
+                        Pets,
+                        Transform,
+                        TransformMounts,
+                        TransformEffect,
+                        TransformWeaponEffect;
 
         static Libraries()
         {
@@ -639,7 +639,7 @@ namespace Client.MirGraphics
             return imageInfos;
         }
 
-        //对齐图集，新的参照点
+        // alignmentOffset 对齐图集，新的参照点(找出最小的 x y ????)
         public Vector2Int alignmentOffset(MImage[] mImages)
         {
             var outResult = new Vector2Int(0, 0);
@@ -897,7 +897,7 @@ namespace Client.MirGraphics
                 colorsAlign[i] = new Color32(0, 0, 0, 0);
             }
             Image.SetPixels32(colorsAlign);
-            Image.SetPixels32(alw, 0, Width, Height, colors);
+            Image.SetPixels32(alw, alh, Width, Height, colors);
 
 
 

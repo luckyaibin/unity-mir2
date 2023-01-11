@@ -225,7 +225,7 @@ public static class AnimBuilder
         buildMirAnim(monsterLib, resPath, AnimType.forkAnimMirDirection(AnimType.MONSTER), AnimType.MONSTER);
     }
 
-    public static void buildMonsteNpc(MLibrary monsterLib, string resPath)
+    public static void buildNpc(MLibrary monsterLib, string resPath)
     {
         buildMirAnim(monsterLib, resPath, AnimType.forkAnimMirDirection(AnimType.NPC), AnimType.NPC);
     }
@@ -364,8 +364,8 @@ public static class AnimBuilder
         float frameTime = frameInfo.Interval / 1000f;
         for (int i = 0; i < imagePaths.Length; i++)
         {
-
-            Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(DataPathToAssetPath(imagePaths[i]));
+            String assetPath = DataPathToAssetPath(imagePaths[i]);
+            Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(assetPath);
             keyFrames[i] = new ObjectReferenceKeyframe();
             keyFrames[i].time = frameTime * i;
             keyFrames[i].value = sprite;

@@ -47,7 +47,7 @@ public class LoginScens : MonoBehaviour, ProcessPacket
     // Update is called once per frame
     void Update()
     {
-
+        System.Console.Write("fucking running...");
     }
 
 
@@ -57,7 +57,7 @@ public class LoginScens : MonoBehaviour, ProcessPacket
         switch (sender.name)
         {
             case "login":
-                var account = new ClientPackets.Login { AccountID = "y123456", Password = "123456" };
+                var account = new ClientPackets.Login { AccountID = "wab2", Password = "123456" };
                 MirNetwork.Enqueue(account);
                 break;
             case "connect":

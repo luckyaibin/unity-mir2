@@ -12,8 +12,8 @@ public class MirResEditor : EditorWindow
 {
     public const int CellWidth = 48;
     public const int CellHeight = 32;
-    private string mirResDataPath = "/Users/yangcai/Documents/unity-workspace/c#Mir/Data";
-    private string mirResMapPath = "/Users/yangcai/Documents/unity-workspace/MirMobile/Assets/Resources/mir/Map";
+    private string mirResDataPath = @"E:\exp\unity-mir2\Assets\Resources\mir\Data";
+    private string mirResMapPath = @"E:\exp\unity-mir2\Assets\Resources\mir\Map";
     [MenuItem("Window/传奇资源")]
     public static void ShowWindow()
     {
@@ -138,7 +138,7 @@ public class MirResEditor : EditorWindow
     }
 
     //private const string resOut = "/Users/yangcai/Documents/unity-workspace/tmp";
-    private const string resOut = "/Users/yangcai/Documents/unity-workspace/MirMobile/Assets/Resources/mir";
+    private const string resOut = "./Assets/Resources/mir";
     private void exportMapRes()
     {
 
@@ -285,7 +285,7 @@ public class MirResEditor : EditorWindow
         }
         resPath = Directory.GetParent(resPath).FullName;
 
-        AnimBuilder.buildMonsteNpc(library, resPath);
+        AnimBuilder.buildNpc(library, resPath);
         library.close();
         return alignOffset;
     }

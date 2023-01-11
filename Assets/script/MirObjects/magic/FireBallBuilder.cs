@@ -8,7 +8,7 @@ namespace mir.objects.magic
 
     public class FireBallBuilder : ThreeSectionBuilder
     {
-        private static readonly string FireBall_INFO_PATH = MapConfigs.MAP_Data + "magic/FireBall/FireBall.info";
+        private static readonly string FireBall_INFO_PATH = MapConfigs.Data_Dir + "magic/FireBall/FireBall.info";
         private static readonly string FireBall_Animator_PATH = "mir/data/magic/FireBall/anim/FireBall";
         public static Vector2 offset = readOffsets(FireBall_INFO_PATH)[0];
 
@@ -31,4 +31,3 @@ namespace mir.objects.magic
     }
 
 }
-

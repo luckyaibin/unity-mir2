@@ -34,13 +34,11 @@ namespace Assets.script.Mir.map
 
         public static GameObject makeMapCell(GameObject mapCell, Type cellType, int mapX, int mapY, MImage imageInfo, MapCellControllerListener mapCellControllerListener)
         {
-
-
-
             var point = mapPointToWorldPoint(mapX, mapY, imageInfo, cellType);
             var tmp = UnityEngine.Object.Instantiate(mapCell, point, Quaternion.identity);
-            tmp.GetComponent<MapCell>().setMapCellControllerListener(mapX, mapY, mapCellControllerListener);
-            tmp.GetComponent<MapCell>().imageInfo = imageInfo;
+            var com = tmp.GetComponent<MapCell>();
+           com.setMapCellControllerListener(mapX, mapY, mapCellControllerListener);
+            com.imageInfo = imageInfo;
             tmp.name = cellType.ToString() + "(" + mapX + "," + mapY + ")";
             if (cellType == Type.tiles)
             {

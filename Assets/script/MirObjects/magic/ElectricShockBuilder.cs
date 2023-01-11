@@ -7,7 +7,7 @@ namespace mir.objects.magic
 {
     public class ElectricShockBuilder : TwoSectionBuilder
     {
-        private static readonly string ElectricShock_INFO_PATH = MapConfigs.MAP_Data + "magic/ElectricShock/ElectricShock.info";
+        private static readonly string ElectricShock_INFO_PATH = MapConfigs.Data_Dir + "magic/ElectricShock/ElectricShock.info";
         private static readonly string ElectricShock_Animator_PATH = "mir/data/magic/ElectricShock/anim/ElectricShock";
         public static Vector2 offset = readOffsets(ElectricShock_INFO_PATH)[0];
 

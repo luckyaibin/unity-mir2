@@ -397,7 +397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491, y: -178}
+  m_AnchoredPosition: {x: -305, y: -153}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &844250798
@@ -409,10 +409,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 844250796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b509d37a016b4b9419665292627db670, type: 3}
+  m_Script: {fileID: 11500000, guid: 65cde49d2b5c89848ab6a354dd166c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRadius: 38
+  maxRadius: 100
   activatedAxis: -1
   showDirection: 1
   OnValueChanged:
@@ -489,7 +489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -6, y: -181}
   m_SizeDelta: {x: 228.97375, y: 69.62518}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1009024673
@@ -546,6 +546,7 @@ GameObject:
   - component: {fileID: 1080743429}
   - component: {fileID: 1080743428}
   - component: {fileID: 1080743432}
+  - component: {fileID: 1080743433}
   m_Layer: 0
   m_Name: main-camera
   m_TagString: MainCamera
@@ -562,12 +563,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1080743427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b762f221681b64cad6dab22a25ae5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 85fb8e82c0fb4954994fb0247b3e72d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapCell: {fileID: 3287966360466227702, guid: 2a638978e6e6343b7acc6cb59aae4ebb, type: 3}
-  player: {fileID: 1736185175}
-  text: {fileID: 1009024673}
 --- !u!81 &1080743429
 AudioListener:
   m_ObjectHideFlags: 0
@@ -647,9 +645,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1080743427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c8b6da42f812445482dc9e87d4e93b9, type: 3}
+  m_Script: {fileID: 11500000, guid: e1304f6d19d3339479077eaaee6c76c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1080743433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080743427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d088d15b0c074914b9136410bdda8cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapCell: {fileID: 3287966360466227702, guid: 82b2aa34167d36d40b5a21a1696c3ae1, type: 3}
+  player: {fileID: 1808932598}
+  text: {fileID: 1009024673}
 --- !u!1 &1305629867
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +843,7 @@ Animator:
   m_GameObject: {fileID: 1736185175}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 04eccb70e829f428080b40d4cda45718, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -886,7 +899,7 @@ SpriteRenderer:
   m_Size: {x: 109, y: 126}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1736185178
@@ -910,13 +923,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736185175}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d01c5f2ab593a546bf7081c533655a3, type: 3}
+  m_Script: {fileID: 11500000, guid: e642d24b35e7c0a44999331047391081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 844250798}
-  speed: 100
 --- !u!143 &1736185180
 CharacterController:
   m_ObjectHideFlags: 0
@@ -952,7 +963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1808932599
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1000,7 +1011,7 @@ SpriteRenderer:
   m_Size: {x: 100, y: 100}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1808932600

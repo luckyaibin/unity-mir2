@@ -7,17 +7,11 @@ using UnityEngine;
 
 public class PlayerObjectBuilder : MirObjectBuilder<ObjectPlayer>
 {
-
     private static readonly string PLAYER_RES_DIR = "mir/Data/CArmour/";
 
-    private static readonly string PLAYER_POFFSET_INFO_PATH = MapConfigs.MAP_Data + "CArmour/cArmour.info";
-
+    //private static readonly string PLAYER_POFFSET_INFO_PATH = MapConfigs.Data_Dir + "CArmour/cArmour.info";
+    private static readonly string PLAYER_POFFSET_INFO_PATH = "Assets/Resources/mir/Data/CArmour/carmour.info";
     public static List<Vector2Int> playerOffsets = readOffsets(PLAYER_POFFSET_INFO_PATH);
-
-
-
-
-
 
     public override GameObject gameObject(ObjectPlayer objectPlayer)
     {
@@ -27,8 +21,6 @@ public class PlayerObjectBuilder : MirObjectBuilder<ObjectPlayer>
         var npcResIndex = objectPlayer.Armour.ToString("00");
         var runtimeAnimatorControllerPath = PLAYER_RES_DIR + npcResIndex + "/anim/" + npcResIndex;
         anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>(runtimeAnimatorControllerPath);
-
-
 
         var mirGameObject = GameObject.Instantiate(npcPrefab, calcPosition(objectPlayer.Location, playerOffsets[objectPlayer.Armour]), Quaternion.identity);
         var animController = mirGameObject.AddComponent<PlayerController>();
