@@ -87,7 +87,7 @@ public static MLibrary[] CArmours,
 
         static Libraries()
         {
-            //Wiz/War/Tao
+            //Wiz/War/Taon
             InitLibrary(ref CArmours, Settings.CArmourPath, "00");
             InitLibrary(ref CHair, Settings.CHairPath, "00");
             InitLibrary(ref CWeapons, Settings.CWeaponPath, "00");
@@ -475,7 +475,7 @@ public static MLibrary[] CArmours,
         private BinaryReader _reader;
         private FileStream _fStream;
 
-        public FrameSet Frames
+        public FrameSet FrameSets
         {
             get { return _frames; }
         }

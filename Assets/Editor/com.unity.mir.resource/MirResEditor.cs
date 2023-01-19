@@ -22,7 +22,7 @@ public class MirResEditor : EditorWindow
     }
     private void OnGUI()
     {
-        GUILayout.Label("C# lib资源路径", EditorStyles.boldLabel);
+        GUILayout.Label("C# lib资源路径"   , EditorStyles.boldLabel);
         //
         EditorGUILayout.BeginHorizontal();
         GUILayout.Label("c# lib Data路径:");
@@ -141,12 +141,10 @@ public class MirResEditor : EditorWindow
     private const string resOut = "./Assets/Resources/mir";
     private void exportMapRes()
     {
-
         MapReader mapReader = new MapReader(mirResMapPath + "/0.map");
         var M2CellInfo = mapReader.MapCells;
         for (int x = 0; x < mapReader.Width; x++)
         {
-
             for (int y = 0; y < mapReader.Height; y++)
             {
 
@@ -333,9 +331,6 @@ public class MirResEditor : EditorWindow
 
     private Vector2Int exportMonsterResOne(MLibrary monsterLib)
     {
-
-
-
         monsterLib.Initialize();
         Vector2Int alignOffset;
         var images = monsterLib.checkImageAlignmentOffset(out alignOffset);
@@ -359,7 +354,6 @@ public class MirResEditor : EditorWindow
 
     private string saveObjectImage(MLibrary lib, MImage image, int imageIndex)
     {
-
         var savePath = getFilePath(lib.getLibPath(), imageIndex);
         if (File.Exists(savePath))
         {

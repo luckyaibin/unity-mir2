@@ -137,7 +137,8 @@ public static class AnimBuilder
 
     static AnimatorController BuildAnimationController(List<Tuple<MirAction, MirDirection, AnimationClip>> clips, string animDir, string name)
     {
-        AnimatorController animatorController = AnimatorController.CreateAnimatorControllerAtPath(animDir + "/" + name + ".controller");
+        var controllerFile = animDir + "/" + name + ".controller";
+        AnimatorController animatorController = AnimatorController.CreateAnimatorControllerAtPath(controllerFile);
         AnimatorControllerLayer layer = animatorController.layers[0];
         animatorController.AddParameter("MirAction", AnimatorControllerParameterType.Int);
         animatorController.AddParameter("MirDirection", AnimatorControllerParameterType.Int);
@@ -186,10 +187,14 @@ public static class AnimBuilder
 
     public static string DataPathToAssetPath(string path)
     {
+        // if (Application.platform == RuntimePlatform.WindowsEditor)
+        //     return path.Substring(path.IndexOf("Assets\\"));
+        // else
+        //     return path.Substring(path.IndexOf("Assets/"));
         if (Application.platform == RuntimePlatform.WindowsEditor)
-            return path.Substring(path.IndexOf("Assets\\"));
+            return path.Substring(path.IndexOf("Assets"));
         else
-            return path.Substring(path.IndexOf("Assets/"));
+            return path.Substring(path.IndexOf("Assets"));
     }
 
     public static void buildMapAnim(string[] imagePaths)
@@ -232,7 +237,7 @@ public static class AnimBuilder
 
     public static void buildMirAnim(MLibrary mLibrary, string resPath, List<MirDirection> mirDirections, int animType)
     {
-        var frames = mLibrary.Frames;
+        var frameSets = mLibrary.FrameSets;
         var clips = new List<Tuple<MirAction, MirDirection, AnimationClip>>();
 
         var animSaveDir = resPath + "/anim";
@@ -242,7 +247,7 @@ public static class AnimBuilder
         }
         animSaveDir = DataPathToAssetPath(animSaveDir);
         var animName = Path.GetFileNameWithoutExtension(resPath);
-        foreach (var frame in frames)
+        foreach (var frame in frameSets)
         {
             var tmp = createFrameClip(frame, resPath, animSaveDir, mirDirections);
             clips.AddRange(tmp);

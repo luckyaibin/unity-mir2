@@ -10,7 +10,8 @@ using UnityEngine;
 public abstract class MirSpellBuilder
 {
 
-    public static string magic_dir = "/Users/yangcai/Documents/unity-workspace/MirMobile/Assets/Resources/mir/data/magic/";
+   // public static string magic_dir = "/Users/yangcai/Documents/unity-workspace/MirMobile/Assets/Resources/mir/data/magic/";
+    public static string magic_dir = "Assets/Resources/mir/data/magic/";
 
 
     protected static int spellFrameTime = 6 * 100;
@@ -135,8 +136,8 @@ public abstract class MirSpellBuilder
         float frameTime = frameInfo.Interval / 1000f;
         for (int i = 0; i < imagePaths.Length; i++)
         {
-
-            Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(AnimBuilder.DataPathToAssetPath(imagePaths[i]));
+            var p = AnimBuilder.DataPathToAssetPath(imagePaths[i]);
+            Texture2D sprite = AssetDatabase.LoadAssetAtPath<Texture2D>(p);
             keyFrames[i] = new ObjectReferenceKeyframe();
             keyFrames[i].time = frameTime * i;
             keyFrames[i].value = sprite;
@@ -179,7 +180,7 @@ public abstract class MirSpellBuilder
         animatorController.AddParameter("Spell", AnimatorControllerParameterType.Int);
         animatorController.AddParameter("SpellAction", AnimatorControllerParameterType.Int);
         AnimatorStateMachine stateMachine = layer.stateMachine;
-        //magic spell 
+        //magic spell
         var spellState = stateMachine.AddState(spell.name);
         spellState.motion = spell;
         makeAnimatorStateTransition(stateMachine.AddAnyStateTransition(spellState), MirSpellAction.sepll);

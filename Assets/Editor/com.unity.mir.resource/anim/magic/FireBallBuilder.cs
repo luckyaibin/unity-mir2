@@ -5,13 +5,7 @@ using Client.MirObjects;
 
 
 public class FireBallBuilder : ThreeSectionSpellBuilder
-{
-
-
-
-
-
-    public override List<Tuple<MirSpellAction, Frame>> magicMoveFrame()
+{    public override List<Tuple<MirSpellAction, Frame>> magicMoveFrame()
     {
         var frames = new List<Tuple<MirSpellAction, Frame>>();
         var start = 10;
